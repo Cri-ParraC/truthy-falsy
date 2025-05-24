@@ -1,0 +1,1 @@
+Lista sencilla de valores truthy y falsy, a modo de recordatorio.

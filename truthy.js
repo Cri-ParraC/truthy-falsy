@@ -1,39 +1,43 @@
-// true
+// truthy.js
 
-console.log(Boolean(true));
+console.log(Boolean(true));                // => true
 
-// Arreglos y objetos (incluso vacíos)
+// Arreglos (incluso vacíos)
 
-console.log(Boolean({ a: 1 }));
-console.log(Boolean({}));
+console.log(Boolean([1, 2, 3]));           // => true
+console.log(Boolean([]));                  // => true
 
-console.log(Boolean([1, 2, 3]));
-console.log(Boolean([]));
+// Objetos (incluso vacíos)
 
-// Maps y Sets (incluso vacíos)
+console.log(Boolean({ a: 1 }));            // => true
+console.log(Boolean({}));                  // => true
 
-console.log(Boolean(new Map([['a', 1]])));
-console.log(Boolean(new Map()));
+// Maps (incluso vacíos)
 
-console.log(Boolean(new Set([1, 2, 3])));
-console.log(Boolean(new Set()));
+console.log(Boolean(new Map([['a', 1]]))); // => true
+console.log(Boolean(new Map()));           // => true
+
+// Sets (incluso vacíos)
+
+console.log(Boolean(new Set([1, 2, 3])));  // => true
+console.log(Boolean(new Set()));           // => true
 
 // Funciones (son objetos)
 
-console.log(Boolean(function () { }));
-console.log(Boolean(() => { }));
+console.log(Boolean(function () { }));     // => true
+console.log(Boolean(() => { }));           // => true
 
 // Cadenas no vacías
 
-console.log(Boolean("0"));
-console.log(Boolean("false"));
-console.log(Boolean("Hola"));
+console.log(Boolean("0"));                 // => true
+console.log(Boolean("false"));             // => true
+console.log(Boolean("Hola"));              // => true
 
 // Números (excepto el 0 y NaN)
 
-console.log(Boolean(42));
-console.log(Boolean(-42));
-console.log(Boolean(3.14));
-console.log(Boolean(-3.14));
-console.log(Boolean(Infinity));
-console.log(Boolean(-Infinity));
+console.log(Boolean(42));                  // => true
+console.log(Boolean(-42));                 // => true
+console.log(Boolean(3.14));                // => true
+console.log(Boolean(-3.14));               // => true
+console.log(Boolean(Infinity));            // => true
+console.log(Boolean(-Infinity));           // => true
